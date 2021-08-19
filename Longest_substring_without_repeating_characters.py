@@ -3,7 +3,7 @@ class Solution:
         string_set = set()
         l = 0
         result = 0
-        
+    
         for r in range(len(s)):
             while s[r] in string_set:
                 string_set.remove(s[l])
