@@ -35,8 +35,7 @@ class Solution:
     def reverse_helper(self , node , prev = None):
         if not node:
             return prev
-        n = node.next
+        next = node.next
         node.next = prev
         
-        return self.reverse_helper(n , node)
-        
+        return self.reverse_helper(next , node)
