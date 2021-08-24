@@ -1,0 +1,13 @@
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        sort_nums = sorted(nums)
+        result = nums
+        hash_dict = {}
+
+        for i in range(len(sort_nums)):
+            if sort_nums[i] not in hash_dict:
+                hash_dict[sort_nums[i]] = i
+
+        for i in range(len(nums)):
+            nums[i] = hash_dict[nums[i]]
+        return nums
